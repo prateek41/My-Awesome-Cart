@@ -1,0 +1,22 @@
+
+{% extends 'shop/basic.html' %}
+
+{% block title%} Checkout - My Awesome Cart{% endblock %}
+{% block body %} 
+<h1>hii there I will calculate your marks</h1>
+<form action="/shop/calc" method="post">{% csrf_token %}
+  <div class="form-group">
+    <label for="marks">Physics</label>
+    <input type="marks" class="form-control" name="phy" id="phy" aria-describedby="emailHelp">
+    
+  </div>
+  <div class="form-group">
+    <label for="marks">Maths</label>
+    <input type="marks" class="form-control" name="mth" id="mth" aria-describedby="emailHelp">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{prateek}}
+
+{% endblock %}
